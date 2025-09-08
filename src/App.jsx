@@ -34,7 +34,7 @@ function App() {
     setLoading(true)
     try {
       // const API_KEY = '107dff9ecbe206388e20a7343fac929f'
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/${cityname}`)
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/weather/${cityname}`)
       if (!response.ok) {
         throw new Error('error is found')
       }
@@ -43,7 +43,7 @@ function App() {
 
     } catch (error) {
       console.error('Error:', error)
-      
+
     }
     finally {
       setLoading(false) // ✅ Button becomes clickable again, spinner stops

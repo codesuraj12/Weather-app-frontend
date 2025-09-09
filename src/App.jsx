@@ -35,7 +35,7 @@ function App() {
 
     setLoading(true)
     try {
-      // const API_KEY = '107dff9ecbe206388e20a7343fac929f'
+  
       const response = await fetch(`${API_BASE_URL}/weather/${cityname}`)    
       if (!response.ok) {
         throw new Error('error is found')
